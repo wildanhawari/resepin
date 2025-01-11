@@ -1,20 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Logo Resepin</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <title>Resepin</title>
+  <script>
+    // Fungsi untuk redirect setelah 3 detik
+    document.addEventListener("DOMContentLoaded", function() {
+      setTimeout(function() {
+        window.location.href = "/getting-started"; // Ganti "/login" dengan route login Laravel Anda
+      }, 3000); // 3000 ms = 3 detik
+    });
+  </script>
 </head>
-<body class="bg-white flex items-center justify-center h-screen">
-  <!-- Container -->
-  <div class=" flex flex-col items-center w-56">
-    <!-- Logo -->
-    <div>
-      <img src="resepinlogo.png" alt="Logo Resepin" class="w-20 h-20">
+<body class="bg-gray-50">
+  <section id="content" class="max-w-[640px] w-full mx-auto bg-white min-h-screen flex flex-col justify-center items-center pb-[120px]">
+    <!-- Splash Screen Content -->
+    <div class="flex flex-col items-center">
+      <!-- Logo -->
+      <div class="w-100 h-100">
+        <img src="{{ asset('assets/logo.png') }}" alt="Logo Resepin" class="w-full h-full object-contain">
+      </div>
+      <!-- Title -->
+      <h1 class="text-2xl font-bold text-gray-800 mt-4">Resepin</h1>
     </div>
-    <!-- Text -->
-    <p class="mt-2 text-black font-bold text-lg">Resepin</p>
-  </div>
+  </section>
 </body>
 </html>

@@ -7,6 +7,8 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-50 flex items-center justify-center h-screen">
+    @include('sweetalert::alert')
+
   <div class="w-full max-w-sm px-6">
     <!-- Logo Placeholder -->
     <div class="text-center">
@@ -15,14 +17,15 @@
     </div>
 
     <!-- Form -->
-    <form class="mt-6 space-y-4">
+    <form class="mt-6 space-y-4" method="POST" action="{{ route('user.login') }}">
+        @csrf
       <div>
         <label for="phone" class="sr-only">Nomor Ponsel</label>
-        <input type="tel" id="phone" placeholder="Nomor Ponsel" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent">
+        <input type="tel" id="phone" name="phone_number" placeholder="Nomor Ponsel" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent">
       </div>
       <div class="relative">
         <label for="password" class="sr-only">Kata Sandi</label>
-        <input type="password" id="password" placeholder="Kata Sandi" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent">
+        <input type="password" id="password" name="password" placeholder="Kata Sandi" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent">
         <button type="button" class="absolute inset-y-0 right-3 flex items-center text-gray-500 focus:outline-none"></button>
         <i class="fa-solid fa-eye"></i>
       </div>
