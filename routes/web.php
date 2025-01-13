@@ -66,3 +66,7 @@ Route::put('/password/update', [UserController::class, 'updatePassword'])->name(
 
 
 });
+
+Route::get('/offline', function () {
+    return view('modules/laravelpwa/offline');
+});
