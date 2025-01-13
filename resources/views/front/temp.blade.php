@@ -52,6 +52,144 @@
         </button>
         </div>
 
+        <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bento UI</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white">
+  <div class="max-w-md mx-auto p-4">
+    <!-- Header -->
+    <div class="flex items-center justify-between mb-4">
+      <div class="text-lg font-bold">9:41</div>
+      <div class="flex items-center space-x-2">
+        <div class="w-4 h-4 bg-gray-500 rounded-full"></div>
+        <div class="text-sm">32%</div>
+      </div>
+    </div>
+
+    <!-- Search Bar -->
+    <div class="flex items-center bg-gray-100 p-2 rounded-lg mb-6">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6 text-gray-400">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35M17.5 10.5a7 7 0 11-14 0 7 7 0 0114 0z" />
+      </svg>
+      <input type="text" placeholder="Mau masak apa ?" class="flex-1 bg-transparent outline-none px-2 text-gray-700">
+      <button>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6 text-gray-400">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Recipes Grid -->
+    <div class="grid grid-cols-2 gap-4">
+      <!-- Recipe Card -->
+      <div class="bg-white shadow rounded-lg overflow-hidden">
+        <img src="https://via.placeholder.com/150" alt="Nasi Goreng Ayam" class="w-full h-32 object-cover">
+        <div class="p-3">
+          <h3 class="text-sm font-semibold mb-1">Nasi Goreng Ayam</h3>
+          <div class="flex items-center text-xs text-gray-500">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4 mr-1">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h6" />
+            </svg>
+            15 Menit
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white shadow rounded-lg overflow-hidden">
+        <img src="https://via.placeholder.com/150" alt="Gyoza" class="w-full h-32 object-cover">
+        <div class="p-3">
+          <h3 class="text-sm font-semibold mb-1">Gyoza</h3>
+          <div class="flex items-center text-xs text-gray-500">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4 mr-1">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h6" />
+            </svg>
+            15 Menit
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white shadow rounded-lg overflow-hidden">
+        <img src="https://via.placeholder.com/150" alt="Rendang Padang" class="w-full h-32 object-cover">
+        <div class="p-3">
+          <h3 class="text-sm font-semibold mb-1">Rendang Padang</h3>
+          <div class="flex items-center text-xs text-gray-500">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4 mr-1">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h6" />
+            </svg>
+            15 Menit
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white shadow rounded-lg overflow-hidden">
+        <img src="https://via.placeholder.com/150" alt="Fettucini" class="w-full h-32 object-cover">
+        <div class="p-3">
+          <h3 class="text-sm font-semibold mb-1">Fettucini</h3>
+          <div class="flex items-center text-xs text-gray-500">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4 mr-1">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h6" />
+            </svg>
+            15 Menit
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white shadow rounded-lg overflow-hidden">
+        <img src="https://via.placeholder.com/150" alt="Okonomiyaki" class="w-full h-32 object-cover">
+        <div class="p-3">
+          <h3 class="text-sm font-semibold mb-1">Okonomiyaki</h3>
+          <div class="flex items-center text-xs text-gray-500">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4 mr-1">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h6" />
+            </svg>
+            15 Menit
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white shadow rounded-lg overflow-hidden">
+        <img src="https://via.placeholder.com/150" alt="Nasi Daging Sapi Korea" class="w-full h-32 object-cover">
+        <div class="p-3">
+          <h3 class="text-sm font-semibold mb-1">Nasi Daging Sapi Korea</h3>
+          <div class="flex items-center text-xs text-gray-500">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4 mr-1">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h6" />
+            </svg>
+            15 Menit
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
+<!-- Recipes Grid -->
+<div class="grid grid-cols-2 gap-4">
+    <!-- Recipe Card -->
+    @forelse ($foods as $food)
+    <div class="bg-white shadow rounded-lg overflow-hidden">
+      <img src="{{ Storage::url($food->photo) }}" alt="Nasi Goreng Ayam" class="w-full h-24 object-cover">
+      <div class="p-2">
+        <h3 class="text-sm font-semibold">{{ $food->name }}</h3>
+        <p class="text-xs text-gray-500 flex items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4 mr-1">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h6" />
+          </svg>
+          15 Menit
+        </p>
+      </div>
+    </div>
+    @empty
+
+    @endforelse
+  </div>
+
 
 
         {{-- Menu Navbar TERBARU--}}

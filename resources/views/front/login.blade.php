@@ -20,8 +20,8 @@
     <form class="mt-6 space-y-4" method="POST" action="{{ route('user.login') }}">
         @csrf
       <div>
-        <label for="phone" class="sr-only">Nomor Ponsel</label>
-        <input type="tel" id="phone" name="phone_number" placeholder="Nomor Ponsel" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent">
+        <label for="email" class="sr-only">Email</label>
+        <input type="email" id="email" name="email" placeholder="Email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent">
       </div>
       <div class="relative">
         <label for="password" class="sr-only">Kata Sandi</label>
@@ -49,7 +49,7 @@
 
     <!-- Register -->
     <p class="mt-6 text-center text-sm text-gray-500">
-      Belum Punya Akun? <a href="#" class="text-green-500 font-medium hover:underline">Daftar</a>
+      Belum Punya Akun? <a href="/register" class="text-green-500 font-medium hover:underline">Daftar</a>
     </p>
   </div>
 </body>

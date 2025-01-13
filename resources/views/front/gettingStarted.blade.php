@@ -38,20 +38,20 @@
     <!-- Buttons -->
     <div class="mt-8 space-y-4">
         <!-- Link Daftar -->
-        <a 
-          href="/daftar" 
+        <a
+          href="/register"
           class="block w-full py-3 text-center bg-white text-green-500 border border-green-500 rounded-lg font-medium hover:bg-green-50 transition">
           Daftar
         </a>
-      
+
         <!-- Link Masuk -->
-        <a 
-          href="/login" 
+        <a
+          href="/login"
           class="block w-full py-3 text-center bg-green-500 text-white rounded-lg font-medium hover:bg-green-600 transition">
           Masuk
         </a>
       </div>
-      
+
   </div>
 </body>
 </html>

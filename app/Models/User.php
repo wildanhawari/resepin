@@ -21,6 +21,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'phone_number',
     ];
 
     /**
@@ -45,4 +46,10 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    public function bookmarks()
+    {
+        return $this->belongsToMany(Food::class, 'bookmarks', 'user_id', 'food_id')->withTimestamps();
+    }
+
 }

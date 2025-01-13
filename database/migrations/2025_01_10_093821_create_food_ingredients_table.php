@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('ingredient_id')->constrained()->cascadeOnDelete();
             $table->foreignId('food_id')->constrained()->cascadeOnDelete();
+            $table->string('quantity');
             $table->timestamps();
         });
     }
