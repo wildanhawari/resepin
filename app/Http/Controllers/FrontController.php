@@ -52,10 +52,24 @@ class FrontController extends Controller
         return view('front.detail', compact('food'));
     }
 
-    public function bookmark()
+    public function bookmark(Request $request)
 {
-    $bookmarks = Bookmark::where('user_id', Auth::id())->with('food')->get();
-    // dd($bookmarks);
+    // Ambil query pencarian dari input pengguna
+    $search = $request->input('search');
+
+    // Jika ada input pencarian, gunakan scope 'search' untuk mencari bookmark berdasarkan nama makanan
+    if ($search) {
+        $bookmarks = Bookmark::where('user_id', Auth::id())
+            ->search($search)
+            ->with('food')
+            ->get();
+    } else {
+        // Jika tidak ada input pencarian, tampilkan semua bookmark
+        $bookmarks = Bookmark::where('user_id', Auth::id())
+            ->with('food')
+            ->get();
+    }
+
     return view('front.bookmark', compact('bookmarks'));
 }
 

@@ -14,28 +14,23 @@
     <section id="content" class="max-w-[640px] w-full mx-auto bg-white min-h-screen flex flex-col gap-8 pb-[120px]">
         <!-- Search Bar -->
         <div class="p-5 mt-5">
-            <div class="flex items-center bg-gray-100 rounded-lg px-3 py-4">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
-                    stroke="currentColor" class="w-6 h-6 text-gray-400">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                        d="M21 21l-4.35-4.35M17.5 10.5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                </svg>
-                <input type="text" placeholder="Mau cari resep apa ?"
-                    class="flex-1 bg-transparent outline-none px-2 text-gray-700">
-                <button>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
-                        stroke="currentColor" class="w-6 h-6 text-gray-400">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7" />
-                    </svg>
-                </button>
-            </div>
+            <form action="{{ route('front.bookmark') }}" method="GET">
+                <div class="flex items-center bg-gray-100 rounded-lg px-3 py-4">
+                    <input type="text" name="search" value="{{ request()->input('search') }}" placeholder="Cari makanan yang di-bookmark"
+                        class="flex-1 bg-transparent outline-none px-2 text-gray-700">
+                    <button type="submit">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                            stroke="currentColor" class="w-6 h-6 text-gray-400">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7" />
+                        </svg>
+                    </button>
+                </div>
+            </form>
         </div>
 
-        <!-- Recipes Grid -->
         <div class="grid grid-cols-2 gap-6 p-5">
-            @forelse ($bookmarks as $index => $bookmark)
-                @php $index++; @endphp
-                <div class="relative bg-white rounded-lg overflow-hidden {{ $index % 2 == 0 ? 'row-span-2' : '' }}">
+            @forelse ($bookmarks as $bookmark)
+                <div class="relative bg-white rounded-lg overflow-hidden">
                     {{-- Icon Delete --}}
                     <button
                         class="absolute top-2 right-2 bg-red-500 text-white p-1 rounded-full hover:bg-red-600 focus:outline-none delete-button"
@@ -54,22 +49,16 @@
 
                     {{-- Card Content --}}
                     <img src="{{ Storage::url($bookmark->food->photo) }}" alt="{{ $bookmark->food->name }}"
-                        class="w-full {{ $index % 2 == 0 ? 'h-70' : 'h-48' }} object-cover rounded-2xl">
+                        class="w-full h-48 object-cover rounded-2xl">
                     <div class="p-4">
                         <h3 class="text-sm font-semibold">{{ $bookmark->food->name }}</h3>
-                        <p class="text-xs text-gray-500 flex items-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
-                                stroke="currentColor" class="w-4 h-4 mr-1">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h6" />
-                            </svg>
-                            15 Menit
-                        </p>
                     </div>
                 </div>
             @empty
-                <p class="col-span-2 text-center text-gray-500">No recipes available.</p>
+                <p class="col-span-2 text-center text-gray-500">No bookmarks available.</p>
             @endforelse
         </div>
+
 
         {{-- Menu Navbar --}}
         <div
