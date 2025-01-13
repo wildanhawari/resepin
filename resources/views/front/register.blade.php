@@ -86,4 +86,19 @@
 
         <!-- Footer -->
         <p class="mt-6 text-center text-xs text-gray-400">
-            Dengan menggunakan
+            Dengan menggunakan layanan kami, Anda setuju dengan <a href="/terms" class="text-green-500 font-medium hover:underline">Syarat dan Ketentuan</a> serta <a href="/privacy" class="text-green-500 font-medium hover:underline">Kebijakan Privasi</a> kami.
+        </p>
+    </div>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script>
+        function togglePassword(id) {
+            const passwordField = document.getElementById(id);
+            const type = passwordField.type === "password" ? "text" : "password";
+            passwordField.type = type;
+        }
+    </script>
+</body>
+
+</html>
+

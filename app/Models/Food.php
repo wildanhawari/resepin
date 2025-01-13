@@ -53,5 +53,13 @@ class Food extends Model
         return $this->belongsToMany(User::class, 'bookmarks', 'food_id', 'user_id')->withTimestamps();
     }
 
+    public function scopeSearch($query, $search)
+    {
+        if ($search) {
+            return $query->where('name', 'like', '%' . $search . '%');
+        }
+        return $query;
+    }
+
 
 }

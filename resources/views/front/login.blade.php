@@ -30,12 +30,12 @@
         <i class="fa-solid fa-eye"></i>
       </div>
       <div class="text-right">
-        <a href="#" class="text-sm text-green-500 hover:underline">Lupa Kata Sandi?</a>
+        <a href="/forgot-password" class="text-sm text-green-500 hover:underline">Lupa Kata Sandi?</a>
       </div>
       <button type="submit" class="w-full bg-green-500 text-white py-3 rounded-lg font-medium hover:bg-green-600 transition">Masuk</button>
     </form>
 
-    <!-- Divider -->
+    {{-- <!-- Divider -->
     <div class="flex items-center my-4">
       <div class="flex-grow h-px bg-gray-300"></div>
       <span class="px-4 text-gray-500 text-sm">Atau</span>
@@ -45,7 +45,7 @@
     <!-- Login with Google -->
     <button class="w-full border border-gray-300 text-gray-600 py-3 rounded-lg font-medium hover:bg-gray-100 transition flex items-center justify-center">
       <span>Masuk dengan Google</span>
-    </button>
+    </button> --}}
 
     <!-- Register -->
     <p class="mt-6 text-center text-sm text-gray-500">

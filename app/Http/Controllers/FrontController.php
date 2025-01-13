@@ -18,8 +18,18 @@ class FrontController extends Controller
         return view('front.index', compact('categories', 'foods'));
     }
 
-    public function search() {
-        $foods = Food::all();
+    public function search(Request $request) {
+        // Ambil query pencarian dari input pengguna
+        $search = $request->input('search');
+
+        // Jika ada input pencarian, gunakan scope 'search' untuk mencari resep berdasarkan nama
+        if ($search) {
+            $foods = Food::search($search)->get();
+        } else {
+            // Jika tidak ada input pencarian, tampilkan semua resep
+            $foods = Food::all();
+        }
+
         return view('front.search', compact('foods'));
     }
 
@@ -84,6 +94,8 @@ public function toggleBookmark(Food $food)
         $food->load('tutorials');
         return view('front.tutorial', compact('food'));
     }
+
+
 
 
 

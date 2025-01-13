@@ -34,6 +34,9 @@ Route::get('/register', function () {
 });
 Route::post('/register', [UserController::class, 'register'])->name('user.register');
 
+Route::get('/forgot-password', function () {
+    return view('front.forgotPassword');
+});
 
 Route::middleware('auth')->group(function () {
     Route::get('/home', [FrontController::class, 'home'])->name('front.home');
