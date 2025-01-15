@@ -28,14 +28,6 @@
                 </svg>
             </button> --}}
         </div>
-        {{-- <!-- Logout Form -->
-        <form action="{{ route('user.logout') }}" method="POST" class="mt-6">
-            @csrf
-            <button type="submit"
-                class="bg-red-500 text-white py-2 px-6 rounded-lg shadow-lg hover:bg-red-600 transition">
-                Logout
-            </button>
-        </form> --}}
 
         <!-- Banner -->
         <div class="px-4 mb-5">
@@ -66,7 +58,7 @@
                     <div class="flex flex-col items-center">
                         <a href="{{ route('front.category', $category->slug) }}"> <!-- Link ke halaman kategori -->
                             <img src="{{ Storage::url($category->icon) }}" alt="{{ $category->name }}"
-                                class="w-12 h-12 rounded-full">
+                                class="w-12 h-12 rounded-full object-cover">
                         </a>
                         <p class="text-sm mt-2">{{ $category->name }}</p>
                     </div>

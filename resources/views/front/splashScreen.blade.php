@@ -9,7 +9,7 @@
     // Fungsi untuk redirect setelah 3 detik
     document.addEventListener("DOMContentLoaded", function() {
       setTimeout(function() {
-        window.location.href = "/getting-started"; // Ganti "/login" dengan route login Laravel Anda
+        window.location.href = "/getting-started"; 
       }, 3000); // 3000 ms = 3 detik
     });
   </script>

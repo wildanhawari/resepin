@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Landing Page</title>
+  <title>Resepin | Getting Started</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-white flex items-center justify-center h-screen">
@@ -11,19 +11,19 @@
     <!-- Decorative Images -->
     <div class="relative h-48">
       <div class="absolute w-24 h-24 rounded-full overflow-hidden border-4 border-white shadow-lg top-2 left-4">
-        <img src="{{ asset('assets/logo.png') }}" alt="Food 1" class="w-full h-full object-cover">
+        <img src="{{ asset('assets/kategori ayam/Chicken Katsu.jpg') }}" alt="Food 1" class="w-full h-full object-cover">
       </div>
       <div class="absolute w-16 h-16 rounded-full overflow-hidden border-4 border-white shadow-lg top-16 right-8">
-        <img src="{{ asset('assets/logo.png') }}" alt="Food 2" class="w-full h-full object-cover">
+        <img src="{{ asset('assets/kategori barat/MAc and cheese.jpg') }}" alt="Food 2" class="w-full h-full object-cover">
       </div>
       <div class="absolute w-32 h-32 rounded-full overflow-hidden border-4 border-white shadow-lg top-20 left-1/2 transform -translate-x-1/2">
-        <img src="{{ asset('assets/logo.png') }}" alt="Food 3" class="w-full h-full object-cover">
+        <img src="{{ asset('assets/Kategori Korea/Tteokbokki.jpg') }}" alt="Food 3" class="w-full h-full object-cover">
       </div>
       <div class="absolute w-12 h-12 rounded-full overflow-hidden border-4 border-white shadow-lg bottom-2 left-12">
-        <img src="{{ asset('assets/logo.png') }}" alt="Food 4" class="w-full h-full object-cover">
+        <img src="{{ asset('assets/kategori ayam/ayam bakar.jpg') }}" alt="Food 4" class="w-full h-full object-cover">
       </div>
       <div class="absolute w-20 h-20 rounded-full overflow-hidden border-4 border-white shadow-lg bottom-4 right-16">
-        <img src="{{ asset('assets/logo.png') }}" alt="Food 5" class="w-full h-full object-cover">
+        <img src="{{ asset('assets/Kategori jepang/sushi.jpg') }}" alt="Food 5" class="w-full h-full object-cover">
       </div>
     </div>
 

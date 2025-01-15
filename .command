@@ -22,3 +22,13 @@ php artisan make:filament-resource Ingredient
 php artisan make:filament-resource Tool
 
 
+clear:
+php artisan cache:clear
+php artisan config:clear
+php artisan view:clear
+
+create user:
+php artisan make:filament-user
+
+update resource:
+php artisan filament:cache-components

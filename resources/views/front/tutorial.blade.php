@@ -60,10 +60,9 @@
                 {{ $food->time }} Menit
             </p>
 
+            {{-- Steps --}}
             <h2 class="mt-6 text-lg font-semibold">Cara Membuat</h2>
             <div class="mt-4 flex flex-col gap-4">
-                <!-- Step 1 -->
-
                 @forelse ($food->tutorials as $index => $tutorial)
                     @php $index++; @endphp
                     <div class="flex gap-4">
@@ -76,15 +75,23 @@
                 @endforelse
             </div>
 
-            <!-- Buttons fix bottom-->
-            <div class="fixed inset-x-0 bottom-0 bg-white shadow-lg px-6 py-4 flex flex-col gap-4 ">
-                <a href="{{ $food->link }}" id="link" target="_blank" rel="noopener noreferrer"
-                    class="tutorial-link w-full bg-green-500 text-white py-3 rounded-lg font-semibold text-center">Tutorial
-                    Memasak</a>
-                <a href="{{ route('food.detail', $food->slug) }}"
-                    class="w-full border border-green-500 text-green-500 py-3 rounded-lg font-semibold text-center">Selesai
-                    Memasak</a>
+            {{-- white space --}}
+            <div class="h-20"></div>
+
+            <!-- Buttons-->
+            <div class="fixed inset-x-0 bottom-0 shadow-lg py-4 flex justify-center">
+                <div class="w-full max-w-[640px] px-4 flex flex-col gap-4">
+                    <a href="{{ $food->link }}" id="link" target="_blank" rel="noopener noreferrer"
+                        class="w-full bg-green-500 text-white py-3 rounded-lg font-semibold text-center">
+                        Tutorial Memasak
+                    </a>
+                    <a href="{{ route('food.detail', $food->slug) }}"
+                        class="w-full border border-green-500 text-green-500 py-3 rounded-lg font-semibold text-center">
+                        Selesai Memasak
+                    </a>
+                </div>
             </div>
+
 
             <!-- Popup -->
             <div id="popup" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
