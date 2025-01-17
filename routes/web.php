@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Artisan;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\FrontController;
 
@@ -69,4 +70,8 @@ Route::put('/password/update', [UserController::class, 'updatePassword'])->name(
 
 Route::get('/offline', function () {
     return view('modules/laravelpwa/offline');
+});
+
+Route::get('/linkstorage', function () {
+    Artisan::call('storage:link');
 });
