@@ -3,9 +3,11 @@
 namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Filament\Panel;
+use App\Models\Food;
+use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Notifications\Notifiable;
 
 class User extends Authenticatable
 {
@@ -50,6 +52,11 @@ class User extends Authenticatable
     public function bookmarks()
     {
         return $this->belongsToMany(Food::class, 'bookmarks', 'user_id', 'food_id')->withTimestamps();
+    }
+
+    public function canAccessPanel(Panel $panel): bool
+    {
+        return str_ends_with($this->email, 'resepin.up.railway.app') && $this->hasVerifiedEmail();
     }
 
 }
