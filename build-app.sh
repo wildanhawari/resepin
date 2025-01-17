@@ -1,1 +1,1 @@
-php artisan storage:link
+php artisan storage:link && composer install && php artisan key:generate && php artisan optimize:clear && php artisan migrate --seed --force && php artisan session:table && php artisan config:cache && php artisan config:clear
