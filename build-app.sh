@@ -1,1 +1,1 @@
-php artisan storage:link && composer install && php artisan key:generate && php artisan optimize:clear && php artisan config:cache && php artisan config:clear
+php artisan storage:link && php artisan config:cache && php artisan config:clear
