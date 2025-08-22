@@ -4,12 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.tailwindcss.com"></script>
+  @PwaHead
   <title>Resepin</title>
   <script>
     // Fungsi untuk redirect setelah 3 detik
     document.addEventListener("DOMContentLoaded", function() {
       setTimeout(function() {
-        window.location.href = "/getting-started"; 
+        window.location.href = "/getting-started";
       }, 3000); // 3000 ms = 3 detik
     });
   </script>
@@ -26,5 +27,6 @@
       <h1 class="text-2xl font-bold text-gray-800 mt-4">Resepin</h1>
     </div>
   </section>
+  @RegisterServiceWorkerScript
 </body>
 </html>

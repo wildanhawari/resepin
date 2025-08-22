@@ -1,0 +1,17 @@
+{
+    "name": "Resepin App",
+    "short_name": "RSP",
+    "background_color": "#ffffff",
+    "display": "standalone",
+    "description": "Aplikasi resep makanan dengan daftar bahan, alat, dan tutorial memasak.",
+    "theme_color": "#4CAF50",
+    "orientation": "portrait",
+    "start_url": "/",
+    "icons": [
+        {
+            "src": "logo.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}

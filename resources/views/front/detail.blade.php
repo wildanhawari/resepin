@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detail Resep</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    @PwaHead
 </head>
 
 <body class="bg-gray-50">
@@ -167,6 +168,7 @@
             document.getElementById('bahan-tab').classList.remove('text-green-500', 'border-green-500');
         });
     </script>
+    @RegisterServiceWorkerScript
 </body>
 
 </html>

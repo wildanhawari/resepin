@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Resepin | Getting Started</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  @PwaHead
 </head>
 <body class="bg-white flex items-center justify-center h-screen">
   <div class="w-full max-w-sm px-6 text-center">
@@ -53,5 +54,6 @@
       </div>
 
   </div>
+  @RegisterServiceWorkerScript
 </body>
 </html>

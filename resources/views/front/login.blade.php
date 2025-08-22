@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resepin | Login</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    @PwaHead
 </head>
 
 <body class="bg-gray-50 flex items-center justify-center h-screen">
@@ -67,6 +68,7 @@
             Belum Punya Akun? <a href="/register" class="text-green-500 font-medium hover:underline">Daftar</a>
         </p>
     </div>
+    @RegisterServiceWorkerScript
 </body>
 
 </html>

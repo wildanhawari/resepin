@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ganti Kata Sandi</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    @PwaHead
     <script>
         function togglePasswordVisibility(inputId, iconId) {
             const input = document.getElementById(inputId);
@@ -95,6 +96,7 @@
             </form>
         </div>
     </section>
+    @RegisterServiceWorkerScript
 </body>
 
 </html>

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resepin | Cara Membuat</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    @PwaHead
 </head>
 
 <body class="bg-gray-50">
@@ -122,7 +123,7 @@
                 </div>
             </div>
     </section>
-
+    @RegisterServiceWorkerScript
     <script>
         // Dapatkan elemen
         const link = document.getElementById('link');

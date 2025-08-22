@@ -7,6 +7,7 @@
     <title>Resepin | Beranda</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    @PwaHead
 </head>
 
 <body class="bg-gray-50">
@@ -131,6 +132,7 @@
             });
         });
     </script>
+    @RegisterServiceWorkerScript
 </body>
 
 </html>

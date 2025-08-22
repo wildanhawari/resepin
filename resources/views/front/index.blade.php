@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resepin | Beranda</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    @PwaHead
 </head>
 
 <body class="bg-gray-50">
@@ -145,6 +146,7 @@
         </div>
 
     </section>
+    @RegisterServiceWorkerScript
 </body>
 
 </html>
